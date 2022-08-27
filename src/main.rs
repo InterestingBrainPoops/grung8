@@ -48,6 +48,7 @@ fn main() -> Result<(), Error> {
 
     event_loop.run(move |event, _, control_flow| {
         // Draw the current frame
+        emu.display(pixels.get_frame());
         if let Event::RedrawRequested(_) = event {
             if pixels
                 .render()
